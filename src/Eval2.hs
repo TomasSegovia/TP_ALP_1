@@ -81,7 +81,7 @@ evalExp (Div e1 e2) s =  case evalDiv e1 e2 s of
 evalExp (VarInc v) s =  case lookfor v s of
                           Left err -> Left err
                           Right res -> let news = update v (res + 1) s in
-                            Right (res :!: news)
+                            Right (res + 1 :!: news)
 evalExp BTrue s =  Right (True :!: s)
 evalExp BFalse s = Right (False :!: s)
 evalExp (Lt e1 e2) s = case evalBinOp e1 e2 (<) s of 

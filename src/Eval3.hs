@@ -26,7 +26,7 @@ lookfor v (s, trace) = case M.lookup v s of
 -- Cambia el valor de una variable en un estado
 -- Completar la definición
 update :: Variable -> Int -> State -> State
-update v n (s, trace) = (M.insert, trace)
+update v n (s, trace) = (M.insert v n s, trace)
 
 -- Agrega una traza dada al estado
 -- Completar la definición

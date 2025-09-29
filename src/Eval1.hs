@@ -66,7 +66,7 @@ evalExp (Div e1 e2) s =  let (res :!: news) = evalBinOp e1 e2 div s in
                           (res :!: news) 
 evalExp (VarInc v) s =  let   res = lookfor v s
                               news = update v (res + 1) s in
-                        (res :!: news)
+                        (res + 1 :!: news)
 evalExp BTrue s =  (True :!: s)
 evalExp BFalse s = (False :!: s)
 evalExp (Lt e1 e2) s = let  (res :!: news) = evalBinOp e1 e2 (<) s in
