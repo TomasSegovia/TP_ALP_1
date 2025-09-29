@@ -1,0 +1,31 @@
+// Encontrar el siguiente primo después de n
+n = 11003324;
+candidate = n + 1;
+found = 0;
+
+repeat {
+    isPrime = 1;
+    
+    // Probar divisibilidad
+    d = 2;
+    repeat {
+        // Simular módulo: candidate - (candidate / d) * d == 0
+        quotient = candidate / d;
+        remainder = candidate - quotient * d;
+        
+        if remainder == 0 {
+            isPrime = 0
+        };
+        
+        d = d++
+    } until d * d > candidate || (isPrime == 0);
+    
+    if (isPrime == 1) {
+        prime = candidate;
+        found = 1
+    } else {
+        candidate = candidate + 1
+    }
+} until (found ==1)
+
+// prime contiene el primo encontrado

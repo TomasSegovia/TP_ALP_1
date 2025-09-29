@@ -1,0 +1,56 @@
+a = 25; // a: 25
+b = 20;
+c = b++; // b:21, c: 21
+
+d = a - b - c // (25-20) - 21 
+
+;
+
+// (21 * 2) + (3/5) - (19 * 2) + 2 = 42 + 0 - 38 + 2
+e = 21 * 2 + 3 / 5 - 19 * (5 - 3) + 2;
+
+// true || (false && false) -> true
+if (! false || false && false) {
+    test1 = 1
+} else {
+    test2 = 0
+};
+
+case {
+    // ! (8>9) (y no (!8) > 9). idem para <,==,!=
+    (! 8 > 9) : {test2 = 1}
+    true : {test2 = 0}
+};
+
+// 2
+num = --2;
+
+// (-4) + 2
+cuenta = - 4+2;
+
+if (cuenta == -2) {
+    test3 = 1
+} else {
+    test3 = 0
+};
+
+x = 10;
+
+// tiene sentido?
+// y : - (x++) -> y: - 11
+// x : (x+1) -> x: 11
+y = -x++;
+
+
+// (-10) + 12 - ((-2) * 20) -> 2 - (-40) -> 42;
+otracuenta = y++ + x++ - -2 * 20;
+
+// tiene sentido que NO de igual?
+if (x++ == x++) {
+    test4 = 0
+} else {
+    test4 = 1
+}
+
+
+

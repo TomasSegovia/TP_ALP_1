@@ -1,0 +1,11 @@
+//Sets the precision to 9 decimals
+scale = 1000000000;
+//Stores the result, the first digit is non decimal.
+sum = 0;
+n = 1;
+
+repeat {
+    term = scale / (n * n * n);
+    sum = sum + term;
+    n = n + 1
+} until term == 0

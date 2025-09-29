@@ -1,0 +1,12 @@
+num = 7;
+isseven = 0;
+case {
+    (num == 0) : {isseven = 0}
+    (num == 1) : {isseven = 0}
+    (num == 2) : {isseven = 0}
+    (num == 3) : {isseven = 0}
+    (num == 4) : {isseven = 0}
+    (num == 5) : {isseven = 0}
+    (num == 6) : {isseven = 0}
+    (num == 7) : {isseven = 1}
+}
