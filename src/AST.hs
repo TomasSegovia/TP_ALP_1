@@ -48,6 +48,7 @@ convertToIf :: [(Exp Bool, Comm)] -> Comm
 convertToIf xs = foldr (\(b, c) r -> IfThenElse b c r) Skip xs
 
 convertToCase :: Comm -> [(Exp Bool, Comm)]
+convertToCase (Skip) = []
 convertToCase (IfThen b c) = [(b, c)]
 convertToCase (IfThenElse b c r) = (b, c):(convertToCase r)
 
